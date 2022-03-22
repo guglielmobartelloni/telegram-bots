@@ -3,6 +3,7 @@ package bartelloni.it.tenaxscraper;
 import bartelloni.it.tenaxscraper.scraping.TenaxEvent;
 import bartelloni.it.tenaxscraper.scraping.TenaxEventsFacade;
 import bartelloni.it.tenaxscraper.telegram.bot.TelegramEventSender;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableScheduling;
@@ -14,6 +15,9 @@ import java.util.Collection;
 @EnableScheduling
 public class TenaxScraperApplication {
 
+    @Autowired
+    private TelegramEventSender telegramEventSender;
+
     public static void main(String[] args) {
         SpringApplication.run(TenaxScraperApplication.class, args);
     }
@@ -22,8 +26,6 @@ public class TenaxScraperApplication {
     @Scheduled(cron = "0 0 8-10 * * *", zone = "Europe/Rome")
     public void scheduleFixedDelayTask() {
         final Collection<TenaxEvent> newEvents = new TenaxEventsFacade().getNewEvents();
-        final TelegramEventSender telegramEventSender = new TelegramEventSender();
-
         newEvents.forEach(telegramEventSender::sendEvent);
     }
 }

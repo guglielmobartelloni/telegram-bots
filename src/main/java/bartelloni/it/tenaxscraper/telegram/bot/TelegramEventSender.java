@@ -5,6 +5,8 @@ import com.pengrad.telegrambot.TelegramBot;
 import com.pengrad.telegrambot.request.SendMessage;
 import com.pengrad.telegrambot.request.SendSticker;
 import org.apache.commons.io.FileUtils;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.io.IOException;
@@ -13,13 +15,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Component
 public class TelegramEventSender {
 
     private TelegramBot telegramBot;
 
 
-    public TelegramEventSender() {
-        this.telegramBot = new TelegramBot("5164483626:AAFSr_aLEkjkVq5pbxNGpROCAqQOYeJlQc0");
+    public TelegramEventSender(@Value("${bot.token}") String botToken) {
+        this.telegramBot = new TelegramBot(botToken);
     }
 
     public void sendEvent(TenaxEvent event) {
