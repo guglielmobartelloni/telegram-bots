@@ -48,6 +48,9 @@ public class TelegramBotController implements TelegramMvcController {
 
     private void saveChatId(Long id) throws IOException {
         File file = new File("saved-users.txt");
+        if(FileUtils.readLines(file,StandardCharsets.UTF_8).stream().anyMatch(e -> e.equals(id))){
+            return;
+        }
         FileUtils.writeStringToFile(
                 file, id + "\n", StandardCharsets.UTF_8, true);
     }
