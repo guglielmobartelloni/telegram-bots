@@ -13,10 +13,11 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
 @BotController
-public class TelegramEventNotifier implements TelegramMvcController {
+public class TelegramBotController implements TelegramMvcController {
 
     @Value("${bot.token}")
     private String botToken;
+
     @Override
     public String getToken() {
         return botToken;
@@ -25,12 +26,12 @@ public class TelegramEventNotifier implements TelegramMvcController {
     @MessageRequest("/start")
     public String start(Chat chat, User user) throws IOException {
         saveChatId(chat.id());
-        return "Benvenuto "+user.username();
+        return "Benvenuto " + user.username();
     }
 
     private void saveChatId(Long id) throws IOException {
         File file = new File("saved-users.txt");
         FileUtils.writeStringToFile(
-                file, id+"\n", StandardCharsets.UTF_8, true);
+                file, id + "\n", StandardCharsets.UTF_8, true);
     }
 }
