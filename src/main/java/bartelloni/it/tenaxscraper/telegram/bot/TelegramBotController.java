@@ -38,8 +38,8 @@ public class TelegramBotController implements TelegramMvcController {
     }
 
     @MessageRequest("/eventi")
-    public String getEventi(Chat chat, User user) {
-        final List<TenaxEvent> events = scraper.getEventsFromFile();
+    public String getEventi(Chat chat, User user) throws IOException {
+        final List<TenaxEvent> events = scraper.getEvents();
         for (TenaxEvent event : events) {
             telegramEventSender.sendEvent(event, List.of(chat.id()));
         }
