@@ -15,6 +15,6 @@ class TelegramEventSenderTest {
                 .title("30 e lode")
                 .eventDate("24 Marzo 2022")
                 .build();
-        new TelegramEventSender("5164483626:AAFSr_aLEkjkVq5pbxNGpROCAqQOYeJlQc0").sendEvent(event);
+        new TelegramEventSender("5164483626:AAFSr_aLEkjkVq5pbxNGpROCAqQOYeJlQc0").sendEvent(event, List.of(763663817L));
     }
 }
