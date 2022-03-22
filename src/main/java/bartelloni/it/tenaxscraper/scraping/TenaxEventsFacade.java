@@ -1,4 +1,4 @@
-package bartelloni.it.tenaxscraper;
+package bartelloni.it.tenaxscraper.scraping;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -10,10 +10,8 @@ public class TenaxEventsFacade {
             final List<TenaxEvent> scrapedEvents = scraper.getEvents();
             final List<TenaxEvent> savedEvents = scraper.getEventsFromFile();
             scrapedEvents.removeAll(savedEvents);
-
             //Save scraped events to file
             scraper.writeEventsToFile(scrapedEvents);
-
             return scrapedEvents;
         } catch (Exception e) {
             e.printStackTrace();
