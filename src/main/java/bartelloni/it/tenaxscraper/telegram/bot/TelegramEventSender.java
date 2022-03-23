@@ -23,9 +23,10 @@ public class TelegramEventSender {
         for (Long chatId : chatIdList) {
             SendSticker sendSticker = new SendSticker(chatId, event.getImageLink());
 //            telegramBot.execute(sendSticker);
-            telegramBot.execute(new SendMessage(chatId, "Nuovo evento: " + event.getTitle()));
-            telegramBot.execute(new SendMessage(chatId, "Data: " + event.getEventDate()));
-            telegramBot.execute(new SendMessage(chatId, "Link: " + event.getLink()));
+            String eventMessage = "Nuovo evento: " + event.getTitle() + "\n" +
+                    "Data: " + event.getEventDate() + "\n" +
+                    "Link: " + event.getLink();
+            telegramBot.execute(new SendMessage(chatId, eventMessage));
         }
     }
 
