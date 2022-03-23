@@ -30,7 +30,7 @@ public class TenaxScraperApplication {
     }
 
 
-    @Scheduled(cron = "0 0 8-10 * * *", zone = "Europe/Rome")
+    @Scheduled(cron = "0 0 8-22 * * *", zone = "Europe/Rome")
     public void scheduleFixedDelayTask() {
         final Collection<TenaxEvent> newEvents = new TenaxEventsFacade().getNewEvents();
         final List<Long> chatIds = getChatIds();
