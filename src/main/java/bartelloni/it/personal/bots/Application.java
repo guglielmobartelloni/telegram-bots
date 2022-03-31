@@ -1,8 +1,8 @@
-package bartelloni.it.tenaxscraper;
+package bartelloni.it.personal.bots;
 
-import bartelloni.it.tenaxscraper.scraping.TenaxEvent;
-import bartelloni.it.tenaxscraper.scraping.TenaxEventsFacade;
-import bartelloni.it.tenaxscraper.telegram.bot.TelegramEventSender;
+import bartelloni.it.personal.bots.tenax.TenaxEvent;
+import bartelloni.it.personal.bots.tenax.TenaxEventsFacade;
+import bartelloni.it.personal.bots.utils.TelegramEventSender;
 import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
@@ -20,13 +20,13 @@ import java.util.stream.Collectors;
 
 @SpringBootApplication
 @EnableScheduling
-public class TenaxScraperApplication {
+public class Application {
 
     @Autowired
     private TelegramEventSender telegramEventSender;
 
     public static void main(String[] args) {
-        SpringApplication.run(TenaxScraperApplication.class, args);
+        SpringApplication.run(Application.class, args);
     }
 
 

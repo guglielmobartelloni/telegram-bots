@@ -1,6 +1,6 @@
-package bartelloni.it.tenaxscraper.telegram.bot;
+package bartelloni.it.personal.bots.utils;
 
-import bartelloni.it.tenaxscraper.scraping.TenaxEvent;
+import bartelloni.it.personal.bots.tenax.TenaxEvent;
 import com.pengrad.telegrambot.TelegramBot;
 import com.pengrad.telegrambot.request.SendMessage;
 import com.pengrad.telegrambot.request.SendSticker;

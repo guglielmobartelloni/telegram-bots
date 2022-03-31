@@ -1,4 +1,4 @@
-package bartelloni.it.tenaxscraper.scraping;
+package bartelloni.it.personal.bots.tenax;
 
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.WebClientOptions;
@@ -45,7 +45,7 @@ public class Scraper implements AutoCloseable {
 
             String eventDate = eventDay + " " + eventMonthAndYear;
 
-            final TenaxEvent tenaxEvent = new TenaxEvent.TenaxEventBuilder()
+            final TenaxEvent tenaxEvent = TenaxEvent.builder()
                     .title(eventTitle)
                     .link(eventLink)
                     .imageLink(eventImageLink)

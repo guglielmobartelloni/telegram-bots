@@ -1,4 +1,4 @@
-package bartelloni.it.tenaxscraper.scraping;
+package bartelloni.it.personal.bots.tenax;
 
 import lombok.*;
 

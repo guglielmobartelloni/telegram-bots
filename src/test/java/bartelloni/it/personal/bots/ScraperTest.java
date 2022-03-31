@@ -1,6 +1,6 @@
-package bartelloni.it.tenaxscraper;
+package bartelloni.it.personal.bots;
 
-import bartelloni.it.tenaxscraper.scraping.Scraper;
+import bartelloni.it.personal.bots.tenax.Scraper;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;

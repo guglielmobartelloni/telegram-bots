@@ -1,7 +1,6 @@
-package bartelloni.it.tenaxscraper.telegram.bot;
+package bartelloni.it.personal.bots.tenax;
 
-import bartelloni.it.tenaxscraper.scraping.Scraper;
-import bartelloni.it.tenaxscraper.scraping.TenaxEvent;
+import bartelloni.it.personal.bots.utils.TelegramEventSender;
 import com.github.kshashov.telegram.api.TelegramMvcController;
 import com.github.kshashov.telegram.api.bind.annotation.BotController;
 import com.github.kshashov.telegram.api.bind.annotation.request.MessageRequest;
@@ -17,7 +16,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 @BotController
-public class TelegramBotController implements TelegramMvcController {
+public class TenaxBot implements TelegramMvcController {
 
     @Value("${bot.token}")
     private String botToken;

@@ -1,6 +1,7 @@
-package bartelloni.it.tenaxscraper.telegram.bot;
+package bartelloni.it.personal.bots.telegram.bot;
 
-import bartelloni.it.tenaxscraper.scraping.TenaxEvent;
+import bartelloni.it.personal.bots.tenax.TenaxEvent;
+import bartelloni.it.personal.bots.utils.TelegramEventSender;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
