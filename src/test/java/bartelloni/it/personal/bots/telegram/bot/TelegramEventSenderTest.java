@@ -1,7 +1,7 @@
 package bartelloni.it.personal.bots.telegram.bot;
 
 import bartelloni.it.personal.bots.tenax.TenaxEvent;
-import bartelloni.it.personal.bots.utils.TelegramEventSender;
+import bartelloni.it.personal.bots.tenax.TelegramEventSender;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

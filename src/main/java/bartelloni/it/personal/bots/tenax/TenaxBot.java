@@ -1,6 +1,5 @@
 package bartelloni.it.personal.bots.tenax;
 
-import bartelloni.it.personal.bots.utils.TelegramEventSender;
 import com.github.kshashov.telegram.api.TelegramMvcController;
 import com.github.kshashov.telegram.api.bind.annotation.BotController;
 import com.github.kshashov.telegram.api.bind.annotation.request.MessageRequest;

@@ -3,7 +3,7 @@ package bartelloni.it.personal.bots;
 import bartelloni.it.personal.bots.gym.GymBooker;
 import bartelloni.it.personal.bots.tenax.TenaxEvent;
 import bartelloni.it.personal.bots.tenax.TenaxEventsFacade;
-import bartelloni.it.personal.bots.utils.TelegramEventSender;
+import bartelloni.it.personal.bots.tenax.TelegramEventSender;
 import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;

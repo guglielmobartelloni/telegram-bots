@@ -1,4 +1,4 @@
-package bartelloni.it.personal.bots.utils;
+package bartelloni.it.personal.bots.tenax;
 
 import bartelloni.it.personal.bots.tenax.TenaxEvent;
 import com.pengrad.telegrambot.TelegramBot;
